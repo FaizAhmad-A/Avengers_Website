@@ -1,0 +1,316 @@
+*{
+    padding: 0%;
+    margin: 0%; 
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%; 
+    padding: 150px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    overflow-x: hidden;
+}
+.container .nav{ 
+    position: absolute;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    top: 0%;
+    left: 0%;
+    z-index: 10;
+    width: 95vw;
+    margin: 1% 0 1% 2%;
+    transition: all 0.3s;
+}
+.container .nav .logo{
+    display: flex;
+    height: 50px;
+    width: 140px;
+    position: relative;
+    background-color: white;
+}
+.container .nav .submenu{
+    position: relative;
+    display: flex;
+}
+.container .nav .submenu a{
+    margin-left: 40px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: black 1px 1px 2px;
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    text-decoration: underline;
+    transition: all 0.4s;
+    display: inline;
+}
+.container .nav .submenu a:hover{
+    transform: scale(1.3,1.3);
+    background-color: white;
+    color: maroon;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold
+}
+.container .nav .checkbtn{
+    font-size: 28px;
+    color: white;
+    margin-right: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 0%;
+    display: none;
+    background-color: rgba(0, 0, 0,0.8);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.container .nav #checkk{
+    display: none;
+}
+.container .nav #checkk:checked ~ .submenu{
+    left: 0;
+}
+
+@media screen and  (max-width:900px) {
+    .container .nav{
+        flex-direction: column;
+    }
+    .container .nav .checkbtn{
+        display: block;
+    }
+    .container .nav .logo{
+        position: fixed;
+        left: 5%;
+        align-self: flex-start;
+    }
+    .container .nav .submenu{
+        position: absolute;
+        flex-direction: column;
+        justify-content: start;
+        margin-top: 8%;
+        top: 60px;
+        left: -105%;
+        width: 103%;
+        height: 78vh;
+        transition: all 0.3s;
+        text-align: center;
+        background-color:rgba(241, 138, 138, 0.5);
+    }
+    .container .nav .submenu a{
+        font-size: 25px;
+        margin: 20px 0px;
+        color: white;
+        text-shadow: 2px 1px 2px black;
+    }
+    .container .nav .submenu a:hover{
+        background-color: maroon;
+        color: white;
+    }
+}
+@media screen and  (max-width:450px) {
+    .container .nav .submenu{
+        margin-top: 8%;
+        top: 53px;
+        height: 84vh;
+    }
+    .container .nav .submenu a{
+        font-size: 25px;
+        margin: 15px 0px;
+        color: white;
+        text-shadow: 2px 1px 2px black;
+    }
+}
+
+@media screen and (min-width:200px) and (max-width:450px) {
+    .container .nav .submenu a{
+        font-size: 20px;
+        padding: 20px 0px;
+    }
+}
+@media screen and (min-width:900px) {
+    .container .nav{
+        background:linear-gradient(to bottom,rgba(0, 0, 0.6),rgba(128, 0, 0,0.6)) ;
+    }
+}
+
+/* section */
+.container .section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+.container .section img {
+    height: 75vh;
+    width: 100vw;
+    margin-bottom: 10px;
+    border-bottom: 5px solid black;
+}
+.container .section .content{
+    padding: 20px 80px;
+    font-family: Trebuchet MS;
+}
+.container .section .content h2{
+    margin-bottom: 20px;
+    border-bottom: 3px solid maroon;
+}
+.container .section .content h2,h3,h4,h5{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid maroon;
+}
+.container .section .nobord{
+    border: none;
+}
+.container .section .content span{
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.container .section .content ul{
+    padding-left: 30px;
+    color: red;
+    text-decoration: underline;
+    cursor: pointer;
+    list-style: square color;
+    margin-bottom: 50px;
+    list-style: square;
+}
+@media screen and (min-width:300px) and (max-width:550px) {
+    .container .section .content {
+        padding: 0px 30px;
+    }
+    .container .section .content h2{
+        font-size: 16px;
+    }
+    .container .section .content p{
+        font-size: 12px;
+    }
+    .container .section .content h3{
+        font-size: 15px;
+    }
+    .container .section .content h4{
+        font-size: 13px;
+    }
+    .container .section .content h5{
+        font-size: 13px;
+    }
+    .container .section .content ul{
+        font-size: 12px;
+    }
+}
+@media screen and (min-width:550px) and (max-width:800px) {
+    .container .section .content {
+        padding: 0px 45px;
+    }
+    .container .section .content h2{
+        font-size: 19px;
+    }
+    .container .section .content p{
+        font-size: 14px;
+    }
+    .container .section .content h3{
+        font-size: 17px;
+    }
+    .container .section .content h4{
+        font-size: 15px;
+    }
+    .container .section .content h5{
+        font-size: 15px;
+    }
+    .container .section .content ul{
+        font-size: 14px;
+    }
+}
+
+/* footer */ 
+.webpage .footer1{
+    background-color:rgba(18,17,19,0.6);
+    width: 100%;
+    padding: 5px 0px;
+    text-align: center;
+    padding-bottom: 0%;
+}
+.webpage .footer1 h5{
+    color: white;
+    font-size: 23px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+.webpage .footer1 i{
+    font-size: 35px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.webpage .footer1 i:hover{
+    transform: scale(1.3,1.3);
+    text-shadow: 2px 2px 2px white,0px -2px 2px white,-2px 0px 2px white,-2px -2px 2px white ;
+}
+.webpage .footer1 div{
+    margin-top: 16px;
+    font-size: 14px;
+    padding: 8px;
+    color: white;
+    background-color: black;
+    opacity: 0.7;
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+.webpage .footer1 div span{
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.webpage .footer1 div span:hover{
+    opacity: 1;
+    transform: scale(1.2,1.2);
+}
+@media screen and (min-width:300px) and (max-width:550px) {
+    .webpage .footer1 i{
+        padding: 5px;
+        font-size: 28px;
+    }
+    .webpage .footer1 div{
+        margin-top: 10px;
+        font-size: 8px;
+        padding: 5px;   
+        gap: 10px; 
+    }
+    .webpage .footer1 h5{
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    .webpage .footer1{
+        padding:5px;
+    }
+}
+@media screen and (min-width:550px) and (max-width:1100px) {
+    .webpage .footer1 i{
+        padding: 8px;
+        font-size: 30px;
+    }
+    .webpage .footer1 div{
+        margin-top: 13px;
+        font-size: 12px;
+        padding: 8px;   
+        gap: 10px; 
+    }
+    .webpage .footer1 h5{
+        font-size: 20px;
+        margin-bottom: 13px;
+    }
+    .webpage .footer1{
+        padding: 8px;
+    }
+}

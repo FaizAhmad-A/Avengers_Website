@@ -1,0 +1,374 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;   
+    width: 100%; 
+    padding: 150px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    overflow-x: hidden;
+    background-image: url(./media/avengers-bg1.jpg);
+    background-repeat: no-repeat;
+    background-size:cover; 
+}
+.container .nav{
+    position: absolute;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    top: 0%;
+    left: 0%;
+    z-index: 10;
+    width: 95vw;
+    margin: 1% 0 1% 2%;
+    transition: all 0.3s;
+}
+
+.container .nav .logo{
+    display: flex;
+    height: 50px;
+    width: 140px;
+    position: relative;
+    background-color: white;
+}
+.container .nav .submenu{
+    position: relative;
+    display: flex;
+}
+.container .nav .submenu a{
+    margin-left: 40px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: black 1px 1px 2px;
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    text-decoration: underline;
+    transition: all 0.4s;
+    display: inline;
+}
+.container .nav .submenu a:hover{
+    transform: scale(1.3,1.3);
+    background-color: white;
+    color: maroon;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold
+}
+.container .nav .checkbtn{
+    font-size: 30px;
+    color: white;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 0%;
+    display: none;
+}
+.container .nav #checkk{
+    display: none;
+}
+.container .nav #checkk:checked ~ .submenu{
+    left: 0;
+}
+
+@media screen and  (max-width:900px) {
+    .container .nav{
+        flex-direction: column;
+    }
+    .container .nav .checkbtn{
+        display: block;
+    }
+    .container .nav .logo{
+        position: fixed;
+        left: 5%;
+        align-self: flex-start;
+    }
+    .container .nav .submenu{
+        position: absolute;
+        flex-direction: column;
+        justify-content: start;
+        margin-top: 8%;
+        top: 60px;
+        left: -105%;
+        width: 103%;
+        height: 78vh;
+        transition: all 0.3s;
+        text-align: center;
+        background-color:rgba(241, 138, 138, 0.5);
+        /* padding-top: 40px; */
+    }
+    .container .nav .submenu a{
+        font-size: 25px;
+        margin: 20px 0px;
+        color: white;
+        text-shadow: 2px 1px 2px black;
+    }
+    .container .nav .submenu a:hover{
+        background-color: maroon;
+        color: white;
+    }
+}
+@media screen and  (max-width:450px) {
+    .container .nav .submenu{
+        margin-top: 8%;
+        top: 53px;
+        height: 84vh;
+    }
+    .container .nav .submenu a{
+        font-size: 25px;
+        margin: 15px 0px;
+        color: white;
+        text-shadow: 2px 1px 2px black;
+    }
+}
+
+@media screen and (min-width:200px) and (max-width:450px) {
+    .container .nav .submenu a{
+        font-size: 20px;
+        padding: 20px 0px;
+    }
+}
+@media screen and (min-width:900px) {
+    .container .nav:hover{
+        background-color: maroon;
+    }
+}
+
+
+/* section*/
+
+.container .section{
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 60px 60px ;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+.container .section div{
+    padding:20px 25px;
+    background-color: lightcyan;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px black;
+    border: 3px solid maroon;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+.container .section div:hover{
+    background-color:maroon ;
+    border: 3px solid lightblue;
+}
+
+.container .section div .para{
+    font-size: 19px;
+    font-weight: bold;
+    margin: 10px 0px;
+    padding: 5px 15px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: 3px solid maroon;
+    transition: all 0.5s;
+}
+.container .section div:hover .para{
+    color: black;
+    background-color: white;
+    border:  3px solid black;
+    text-decoration: underline;
+    transform: scale(1.4,1.4) translate(0px,74px);
+    transition: all 0.7;
+}
+@media screen and (max-width:1200px) {
+    .container .section div:hover .para{
+        transform: scale(1.25,1.25) translate(0px,68px);
+    }
+}
+.container .section div .opaci{
+    opacity: 0%;
+    padding: 0%;
+    margin: 0%;
+    font-size: 19px;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    font-family: Gill Sans MT;
+    font-weight: bold;
+}
+.container .section div:hover .opaci{
+    opacity: 100%;
+    transition: all 0.7s;
+}
+.container .section div img{
+    height: 200px;
+    width: 180px;
+    margin: 20px;
+    transition: 0.7s all;
+}
+.container .section div:hover img{
+    transform: scale(1.8,1.8);
+}
+
+@media screen and (min-width:300px) and (max-width:600px) {
+    .container .section{
+        grid-template-columns: auto ;
+    }
+    .container .section div img{
+        height: 170px;
+        width: 150px;
+        margin: 15px;
+    }
+    .container .section div{
+        padding:15px 20px;
+        animation: none;
+    }
+    .container .section div .para{
+        font-size: 15px;
+    }
+    .container .section div .opaci{
+        font-size: 14px;
+    }
+}
+@media screen and (min-width:600px) and (max-width:900px) {
+    .container .section{
+        grid-template-columns: auto auto ;
+    }
+    .container .section div img{
+        height: 170px;
+        width: 150px;
+        margin: 15px;
+    }
+    .container .section div{
+        padding:15px 20px;
+    }
+    .container .section div .para{
+        font-size: 15px;
+    }
+    .container .section div .opaci{
+        font-size: 15px;
+    }
+}
+@media screen and (min-width:900px) and (max-width:1300px) {
+    .container .section{
+    grid-template-columns: auto auto auto;
+    }
+    .container .section div img{
+        height: 170px;
+        width: 150px;
+        margin: 15px;
+    }
+    .container .section div{
+        padding:15px 20px;
+    }
+    .container .section div .para{
+        font-size: 15px;
+    }
+    .container .section div .opaci{
+        font-size: 16px;
+    }
+}
+
+/* transalate effect */
+@media screen and (min-width:1400px) {
+.container .section div:nth-child(1){
+    animation: one 6s 1;
+    animation-direction: alternate-reverse;
+    animation-delay: 1s;
+    transition: all 0.5s;
+    position: static;
+    z-index:6;
+}
+.container .section div:nth-child(2){
+    animation: two 5s 1;
+    animation-direction: alternate ;
+    animation-delay: 7s;
+    transition: all 0.5s;
+    position: static;
+    z-index: 2;
+}
+.container .section div:nth-child(3){
+    animation: three 5s 1;
+    animation-direction: alternate ;
+    animation-delay: 12s;
+    transition: all 0.5s;
+    position: static;
+    z-index: 1;
+}
+.container .section div:nth-child(4){
+    animation: four 6s 1;
+    animation-direction: alternate ;
+    animation-delay: 17s;
+    transition: all 0.5s;
+    position: static;
+    z-index: 4;
+}
+/* animation effect */
+@keyframes one {
+    0%{
+        
+    }
+    50%{
+        transform: scale(1.4,1.4) translate(400px,50px);
+        background-color:maroon ;
+        border: 3px solid lightblue; 
+    }
+    100%{
+
+    }
+}
+@keyframes two {
+    0%{
+        
+    }
+    50%{
+        transform: scale(1.4,1.4) translate(170px,50px);
+        background-color:maroon ;
+        border: 3px solid lightblue; 
+    }
+    100%{
+        
+    }
+}
+@keyframes three {
+    0%{
+        
+    }
+    50%{
+        transform: scale(1.4,1.4) translate(-70px,50px);
+        background-color:maroon ;
+        border: 3px solid lightblue; 
+        z-index: 3;
+    }
+    100%{
+        
+    }
+}
+@keyframes four {
+    0%{
+        
+    }
+    50%{
+        transform: scale(1.4,1.4) translate(-310px,50px);
+        background-color:maroon ;
+        border: 3px solid lightblue; 
+    }
+    100%{
+        
+    }
+}
+}

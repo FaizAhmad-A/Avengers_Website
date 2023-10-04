@@ -1,0 +1,386 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.webpage{
+    overflow: hidden;
+}
+.container{
+    height: 100vh;
+    width: 100%; 
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    position: relative;
+}
+.container video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh; 
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+.container .nav{
+    position: absolute;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    top: 0%;
+    left: 0%;
+    z-index: 10;
+    width: 100vw;
+}
+.container .nav .logo{
+    display: flex;
+    height: 50px;
+    width: 140px;
+    position: relative;
+    background-color: white;
+}
+.container .nav .submenu{
+    position: relative;
+    display: flex;
+}
+.container .nav .submenu a{
+    margin-left: 40px;
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: black 1px 1px 2px;
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    text-decoration: underline;
+    transition: all 0.4s;
+    display: inline;
+}
+.container .nav .submenu a:hover{
+    transform: scale(1.3,1.3);
+    background-color: white;
+    color: maroon;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold
+}
+.container .nav .checkbtn{
+    font-size: 30px;
+    color: white;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    position: absolute;
+    right: 0%;
+    display: none;
+}
+.container .nav #checkk{
+    display: none;
+}
+.container .nav #checkk:checked ~ .submenu{
+    left: 0;
+}
+
+@media screen and  (max-width:900px) {
+    .container .nav{
+        flex-direction: column;
+    }
+    .container .nav .checkbtn{
+        display: block;
+    }
+    .container .nav .logo{
+        position: fixed;
+        left: 5%;
+        align-self: flex-start;
+    }
+    .container .nav .submenu{
+        position: absolute;
+        flex-direction: column;
+        justify-content: start;
+        margin-top: 8%;
+        top: 60px;
+        left:-100%;
+        width: 100%;
+        height: 85vh;
+        transition: all 0.5s;
+        text-align: center;
+        background-color:rgba(246, 36, 36, 0.8);
+    }
+    .container .nav .submenu a{
+        font-size: 25px;
+        margin: 20px 0px;
+        color: white;
+        text-shadow: 2px 1px 2px black;
+    }
+    .container .nav .submenu a:hover{
+        background-color: white;
+        color: maroon;
+    }
+}
+@media screen and  (max-width:450px) {
+    .container .nav .submenu{
+        margin-top: 8%;
+        top: 53px;
+        height: 85vh;
+    }
+    .container .nav .submenu a{
+        font-size: 25px;
+        margin: 15px 0px;
+        color: white;
+        text-shadow: 2px 1px 2px black;
+    }
+}
+
+@media screen and (min-width:200px) and (max-width:450px) {
+    .container .nav .submenu a{
+        font-size: 20px;
+        padding: 20px 0px;
+    }
+}
+
+/* avengers logo */
+.container .main{
+    position: absolute;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+    left: 37%;
+    top: 40%;
+    animation-name: logo;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+}
+.container .main img{
+    height: 150px;
+    width: 350px;
+    position: absolute;
+}
+@keyframes logo {
+
+    0%{
+        left: -40%;
+        top: 40%;
+    }
+    75%{
+        left: 76%;
+        top: 43%;
+    }
+    100%{
+        left: 37%;
+        top: 40%;
+    }
+    
+}
+@media screen and (min-width:800px) and (max-width:1100px) {
+    .container .main{
+        top: 43%;
+        left: 31%;
+    }
+    @keyframes logo {
+        0%{
+            left: -40%;
+            top: 43%;
+        }
+        75%{
+            left: 59%;
+            top: 43%;
+        }
+        100%{
+            left: 31%;
+            top: 43%;
+        }
+    }
+}
+@media screen and (min-width:400px) and (max-width:800px) {
+    .container .main{
+        top: 40%;
+        left: 30%;
+    }
+    .container .main img{
+        height: 120px;
+        width: 300px;
+        transition: all 0.5s;
+    }
+    @keyframes logo {
+        0%{
+            left: -40%;
+            top: 40%;
+        }
+        75%{
+            left: 56%;
+            top: 40%;
+        }
+        100%{
+            top: 40%;
+            left: 30%;
+        }
+    }
+}
+@media screen and (min-width:424px) and (max-width:580px) {
+    .container .main{
+        top: 35%;
+        left: 25%;
+    }
+    .container .main img{
+        height: 100px;
+        width: 250px;
+        transition: all 0.5s;
+    }
+    @keyframes logo {
+        0%{
+            left: -40%;
+            top: 35%;
+        }
+        75%{
+            left: 55%;
+            top: 35%;
+        }
+        100%{
+            top: 35%;
+            left: 25%;
+        }
+    }
+}
+@media screen and (min-width:300px) and (max-width:425px) {
+    .container .main img{
+        height: 70px;
+        width: 200px;
+        transition: all 0.5s;
+    }
+    .container .main{
+        top: 30%;
+        left: 25%;
+    }
+    @keyframes logo {
+        0%{
+            left: -70%;
+            top: 30%;
+        }
+        70%{
+            left: 53%;
+            top: 30%;
+        }
+        100%{
+            top: 30%;
+            left: 25%;
+        }
+    }
+}
+@media screen and (min-width:300px) and (max-width:340px) {
+    .container .main{
+        top: 30%;
+        left: 20%;
+    }
+    @keyframes logo {
+        0%{
+            left: -70%;
+            top: 30%;
+        }
+        70%{
+            left: 40%;
+            top: 30%;
+        }
+        100%{
+            top: 30%;
+            left: 20%;
+        }
+    }
+}
+
+.container .section{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0px;
+    padding-right: 120px;
+    margin-top:70px ;
+    font-family: Gill Sans MT;
+    animation-name: section;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+}
+@keyframes section {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.container .section p{
+    padding: 30px 100px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.container .section a{
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: red;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.container .section a:hover{
+    color: red;
+    background-color: white;
+    transform: scale(1.2,1.2);
+}
+@media screen and (min-width:800px) and (max-width:1100px) {
+    .container .section{
+        margin-top: 15%;
+        font-size: 16px;
+        padding: 10px 50px;
+        margin-right: 10%;
+    }
+    .container .section p{
+        padding: 0px 10px ;
+        font-size: 16px;
+    }
+}
+@media screen and (min-width:300px) and (max-width:550px) {
+    .container .section{
+        font-size: 10px;
+        padding: 40px;
+        left: 0%;
+        margin-top: 25%;
+    }
+    .container .section p{
+        padding: 0px;
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    .container .section a{
+        margin-top: 10px;
+        padding: 7px ;
+        font-size: 14px;
+    }
+}
+@media screen and (min-width:550px) and (max-width:800px) {
+    .container .section{
+        font-size: 10px;
+        padding:  10px 30px ;
+        left: 0%;
+        margin-top: 20%;
+    }
+    .container .section p{
+        padding: 10px 60px;
+        font-size: 16px;
+    }
+    .container .section a{
+        padding:10px ;
+        font-size: 15px;
+    }
+}
